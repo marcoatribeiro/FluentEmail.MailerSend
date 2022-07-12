@@ -1,5 +1,6 @@
 # FluentEmail.MailerSend
 
+[![Nuget](https://img.shields.io/nuget/v/FluentEmail.MailerSend)](https://www.nuget.org/packages/FluentEmail.MailerSend)
 
 This library enables you to use [Mailersend](https://www.mailersend.com/) as a sender for [FluentEmail](https://github.com/lukencode/FluentEmail/).
 
