@@ -16,6 +16,7 @@ namespace FluentEmail.MailerSend
 {
     public class MailerSendSender : ISender
     {
+        private const string _baseAddress = "https://api.mailersend.com/v1/";
         private const string _emailEndPoint = "email";
 
         private readonly HttpClient _httpClient;
@@ -27,10 +28,7 @@ namespace FluentEmail.MailerSend
             _apiKey = apiKey ?? throw new ArgumentNullException(nameof(apiKey));
             options?.Invoke(_options);
 
-            _httpClient = new HttpClient
-            {
-                BaseAddress = new Uri("https://api.mailersend.com/v1/")
-            };
+            _httpClient = new HttpClient { BaseAddress = new Uri(_baseAddress) };
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
         }
 
