@@ -20,16 +20,15 @@ namespace FluentEmail.MailerSend
         private const string _emailEndPoint = "email";
 
         private readonly HttpClient _httpClient;
-        private readonly string _apiKey;
         private readonly MailerSendOptions _options = new MailerSendOptions();
 
         public MailerSendSender(string apiKey, Action<MailerSendOptions>? options = null)
         {
-            _apiKey = apiKey ?? throw new ArgumentNullException(nameof(apiKey));
+            var apiKey1 = apiKey ?? throw new ArgumentNullException(nameof(apiKey));
             options?.Invoke(_options);
 
             _httpClient = new HttpClient { BaseAddress = new Uri(_baseAddress) };
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey1);
         }
 
         public SendResponse Send(IFluentEmail email, CancellationToken? token = null)

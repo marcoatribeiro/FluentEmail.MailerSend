@@ -19,7 +19,7 @@ public class MailerSendSenderTests
                 .Body("<html><body><h1>Test</h1><p>Greetings from the team, you got this message through MailerSend.</p></body></html>", true)
                 .Tag("test_tag")
                 .SendAsync()
-                .ConfigureAwait(false);
+                .ConfigureAwait(true);
 
         response.MessageId.Should().BeEmpty();
         response.ErrorMessages.Should().BeEmpty();
