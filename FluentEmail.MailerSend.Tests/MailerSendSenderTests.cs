@@ -16,6 +16,7 @@ public class MailerSendSenderTests
                 .From("sender@email.com", "Test Sender")
                 .To("test@email.com", "Test recipient")
                 .Subject("FluentEmail MailerSend Test")
+                .AttachFromFilename("<Filepath>")
                 .Body("<html><body><h1>Test</h1><p>Greetings from the team, you got this message through MailerSend.</p></body></html>", true)
                 .Tag("test_tag")
                 .SendAsync()
