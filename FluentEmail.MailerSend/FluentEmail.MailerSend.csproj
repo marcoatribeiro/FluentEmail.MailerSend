@@ -9,15 +9,15 @@
 		<Authors>Marco Ribeiro</Authors>
 		<Company />
 		<PackageId>FluentEmail.MailerSend</PackageId>
-		<PackageVersion>1.0.2</PackageVersion>
+		<PackageVersion>1.0.3</PackageVersion>
 		<PackageTags>mailersend;email;razor;liquid;fluent;fluentemail</PackageTags>
 		<PackageLicenseExpression>MIT OR Apache-2.0</PackageLicenseExpression>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="FluentEmail.Core" Version="3.0.2" />
-		<PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
-		<PackageReference Include="System.Text.Json" Version="6.0.5" />
+		<PackageReference Include="System.Net.Http.Json" Version="9.0.3" />
+		<PackageReference Include="System.Text.Json" Version="9.0.3" />
 	</ItemGroup>
 
 </Project>
